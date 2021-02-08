@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%=city%> Venues</title>
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/venues.css">
+        <script type="text/javascript">
+        function setVenueStyle(i){
+            document.getElementById(`venueinfo${i}`).style=`
+            margin-top:1vw;
+            height:60vh;
+            width:20vw;
+            border:outset;
+            border-color: rgb(250, 147, 28); 
+            background-color: white;
+            opacity:1;
+            transition: opacity .9${i}s`;
+        }
+        function show(){
+            var i=0;
+            while(document.getElementById(`venueinfo${i}`)){
+                setVenueStyle(i);
+            i=i+1;
+        }
+        }
+        function mouseOver(a){
+            document.getElementById(`venueinfo${a}`).style=`cursor:pointer;margin-top:1vw;
+            height:60vh;
+            width:20vw;
+            border:outset;
+            border-color: lightgreen; 
+            background-color: white;;transform:scale(1.2);transition: 1s;`;
+        }
+        function mouseOut(a){
+            setVenueStyle(a);
+        }
+        </script>
+    </head>
+    <body onload="show()">
+        <div class="main-content">
+            <%- include('header.ejs')%>
+            <div id="venuelist">
+                <!-- <h2 style="/*background-color:white;*/">Total Venues in <%-city%>: <%= total; %></h2> -->
+            <table>
+            <tr>
+            <% for(var i in venues){ %>
+            <% if(i%3==0 && i!=1 && i!=0) { %>
+            <tr>
+            <% } %>
+            <td>
+            <div id="venueinfo<%= i%>" style="margin-top:1vw;height:60vh;width:20vw;border:outset;border-color: rgb(250, 147, 28);  background-color: white;opacity:0;" onmouseover="mouseOver(<%= i%>)" onmouseout="mouseOut(<%= i%>)">
+            <img id="venueimg" src="<%= venues[i].image %>" width=300vw height=100vw>
+            <div id="det">
+            <p id=info>Name: <%= venues[i].name; %></p>
+            <p id=info>Address: <%= venues[i].address; %></p>
+            <p id=info>Owner: <%= venues[i].owner; %></p>
+            <p id=info>Contact: <%= venues[i].contact; %></p>
+            <button id="venuesubmit">View</button>
+            </div>
+             </td>   
+            </div>
+            <% } %>
+            </div>
+        </div>
+    </body>
+</html>

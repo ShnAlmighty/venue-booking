@@ -1,0 +1,21 @@
+{
+  "name": "venue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js -e js,hbs,css,ejs,json",
+    "dev": "nodemon server.js -e js,hbs,ejs,css,json"
+  },
+  "author": "shantanu",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

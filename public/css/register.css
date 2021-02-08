@@ -1,0 +1,87 @@
+#register{
+    text-align: center;
+    margin:4vw;
+    padding: 4vw;
+    opacity: 0;
+}
+table{
+    width: 30vw;
+    margin:0 auto;
+    border:groove;
+    background-color: white;
+    padding: 2vw;
+    padding-bottom: 0;
+    border-radius:1vw/1vw;
+}
+input{
+    width:22vw/*17vw*/;
+    height: 6vh;
+    border-radius: 2.3vw/3vw;
+    padding-left:1vw;
+    margin-top: 1vw;
+}
+input:focus{
+outline: none;
+}
+select{
+    width:23.2vw/*18vw*/;
+    height: 6vh;  
+    border-radius: 2.3vw/3vw; 
+    padding-left:1vw;
+    margin-top: 1vw;
+}
+select:focus{
+    outline:none;
+}
+#city{
+    margin-top:1vw;
+}
+select:hover{
+    cursor: pointer;
+}
+button{
+    width:9vw;
+    height:5vh;
+    margin: 1vw;
+    border-radius:3vw/3vw;
+    background-color: lightgreen;
+}
+button:hover{
+    cursor: pointer;
+    /* width:11vw; */
+    transform: scale(1.2);
+    background-color: rgb(15, 223, 15);
+    color:white;
+    transition: .5s;
+}
+#label{
+    position: relative;
+    margin-top:1vw;
+}
+/* #label{
+    position: absolute;
+    border:groove;
+    background-color: white;
+    padding:0.5vw;
+    margin-top:1vw;
+    margin-left:2vw;
+    margin-bottom: 1.5vw;
+    left:41vw;
+    top:50vw;
+}
+/* #label:hover{
+    cursor: pointer;
+} 
+#uploadImg{
+    position: absolute;
+    margin-top:1vw;
+    width:13vw;
+    height: 6vh;
+    margin-left: 1.1vw;
+    left:41vw;
+    top:49vw;
+    opacity: 0;
+}
+#uploadImg:hover{
+    cursor: pointer;
+} */

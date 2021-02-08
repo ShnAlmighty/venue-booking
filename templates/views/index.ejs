@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Index</title>
+        <!-- <link rel="icon" href="/public/weather.png">  -->
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <script type="text/javascript">
+        function show(){
+            document.getElementById("selectCity").style=`
+            opacity:1;
+            transition:opacity 1s;`;
+        }
+        </script>
+    </head>
+    <body onload="show()">
+        <div class="main-content">
+        <%- include('header.ejs')%>
+        <br><br><br>
+        <form action="/venues" method="get" id=selectCity>
+        <select name="city" id="city">
+        <option value="none">Select your city</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Gandhinagar">Gandhinagar</option>
+        </select>
+        <button type="submit" id="search">Search</button>
+        </form>
+        </div>
+        <!-- <%- include('footer.ejs')%> -->
+    </body>
+</html>

@@ -1,0 +1,91 @@
+[
+    {   
+    "city":"Ahmedabad",
+    "total":5,
+    "venues":[
+        {
+            "name":"venue 1",
+            "owner":"owner 1",
+            "contact": 7574889541,
+            "image":"./images/venue1.jpg",
+            "address":"New CG Road"
+        },
+        {
+            "name":"venue 2",
+            "owner":"owner 2",
+            "contact": 7574989541,
+            "image":"./images/venue2.jpg",
+            "address":"CG Road"
+        },
+        {
+            "name":"venue 3",
+            "owner":"owner 3",
+            "contact": 7575889541,
+            "image":"./images/venue3.jpg",
+            "address":"CR Road"
+        },
+        {
+            "name":"venue 4",
+            "owner":"owner 4",
+            "contact": 7573489541,
+            "image":"./images/venue1.jpg",
+            "address":"New CG Road"
+        },
+        {
+            "name":"venue 5",
+            "owner":"owner 5",
+            "contact": 7523889541,
+            "image":"./images/venue2.jpg",
+            "address":"New GR Road"
+        },        
+        {
+            "name":"venue 6",
+            "owner":"owner 6",
+            "contact": 7573489541,
+            "image":"./images/venue1.jpg",
+            "address":"New CG Road"
+        },
+        {
+            "name":"venue 7",
+            "owner":"owner 7",
+            "contact": 7523889541,
+            "image":"./images/venue2.jpg",
+            "address":"New GR Road"
+        }
+    ]
+    },
+    {   
+    "city":"Gandhinagar",
+    "total":4,
+    "venues": [
+        {
+            "name":"venue 1",
+            "owner":"owner 1",
+            "contact": 7574889541,
+            "image":"./images/venue1.jpg",
+            "address":"Gandhinagar 1"
+        },
+        {
+            "name":"venue 2",
+            "owner":"owner 2",
+            "contact": 7574989541,
+            "image":"./images/venue2.jpg",
+            "address":"Gandhinagar 2"
+        },
+        {
+            "name":"venue 3",
+            "owner":"owner 3",
+            "contact": 7575889541,
+            "image":"./images/venue3.jpg",
+            "address":"Gandhinagar 3"
+        },
+        {
+            "name":"venue 4",
+            "owner":"owner 4",
+            "contact": 7573489541,
+            "image":"./images/venue1.jpg",
+            "address":"Gandhinagar 4"
+        }
+    ]
+    }
+]

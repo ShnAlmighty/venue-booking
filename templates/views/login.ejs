@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/login.css">
+        <script type="text/javascript">
+        function show(){
+            document.getElementById("login").style=`    text-align: center;
+            margin:4vw;
+            padding: 4vw;
+            opacity:1;
+            transition:opacity 1s;`;
+        }
+        </script>
+    </head>
+    <body onload="show()">
+        <%- include('header.ejs')%>
+        <form action="/login" method="post" id='login'>
+        <table>
+        <tr>
+        <td><input type="text" name="email" id="email" placeholder="Enter your email id"></td>
+        </tr>
+        <tr>
+        <td><input type="password" name="password" id="password" placeholder="Enter your password"></td>
+        </tr>
+        <td><button type="submit" id="submit"> submit </button></td>
+        </tr>    
+        </table>
+        </form>
+    </body>
+</html>

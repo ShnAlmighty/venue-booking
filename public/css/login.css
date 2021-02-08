@@ -1,0 +1,36 @@
+#login{
+    text-align: center;
+    margin:4vw;
+    padding: 4vw;
+    opacity:0;
+}
+table{
+    margin:0 auto;
+    border:outset;
+    background-color: white;
+    padding: 2vw;
+    padding-bottom: 0;
+}
+input{
+    width:17vw;
+    height: 6vh;
+    border-radius: 2.3vw/3vw;
+    padding-left:1vw;
+    margin-top: 1vw;
+}
+input:focus{
+outline: none;
+}
+button{
+    width:7vw;
+    height:5vh;
+    margin: 1vw;
+    border-radius:3vw/3vw;
+    background-color: lightgreen;
+}
+button:hover{
+    cursor: pointer;
+    width:11vw;
+    background-color: rgb(20, 206, 20);
+    transition: .5s;
+}

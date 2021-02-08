@@ -1,0 +1,32 @@
+#selectCity{
+    opacity:0;
+}
+#city{
+    cursor:pointer;
+    border:0.25vw solid #888888;
+    /* background: #01fc54d0; */
+    color:black;
+    /*padding:1vw;*/
+    width:17vw;
+    height:5vh;
+    margin-bottom:1vw;  
+}
+#search{
+    cursor:pointer;
+    border:0.2vw solid #4a9900;
+    background: #01fc54d0;
+    color:black;
+    /*padding:1vw;*/
+    width:7vw;
+    height:5vh;
+    margin-bottom:1vw;
+    margin-top:8vw;
+}
+#search:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+select:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}

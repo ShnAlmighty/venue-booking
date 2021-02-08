@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/register.css">
+        <script type="text/javascript">
+            function show(){
+                document.getElementById("register").style=`
+                text-align: center;
+                margin:4vw;
+                padding: 4vw;
+                opacity: 1;
+                transition: opacity 1s;`;
+            }
+            function cityCheck(val){
+                if(val == "null"){
+                    if(!document.getElementById('disclaimer')){
+                        var p = document.createElement('p');
+                        p.id="disclaimer";
+                        p.innerHTML="*our services are current available<br>in these citites only";
+                        document.getElementById('city').after(p);
+                    }
+                }
+                else{
+                    document.getElementById('disclaimer').remove()
+                }
+            }
+            function choiceValue(a){
+                if(a == "null"){
+                    alert('Kindly choose a domain');
+                }
+                else{
+                    if(a == "vendor"){
+                        var element = document.createElement('input');
+                        element.type="file";
+                        element.id="uploadImg";
+                        element.name="uploadImg";
+                        // element.multiple="multiple";
+                        document.getElementById('submit').before(element);
+                        document.getElementById('uploadImg').after(document.createElement('br'));
+                        var tag = document.createElement('label');
+                        tag.for=element.id;
+                        tag.id="label"
+                        tag.innerHTML="Upload images of your venue<br>";
+                        document.getElementById('uploadImg').before(tag);
+                    }
+                    else{
+                        if(document.getElementById('uploadImg')){
+                            document.getElementById('uploadImg').remove();
+                            document.getElementById('label').remove();
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="show()">
+        <%- include('header.ejs')%>
+        <form action="/register" method="post" id='register' enctype="multipart/form-data">
+        <table>
+        <tr>
+        <td><select name="choice" id="choice" onchange="choiceValue(this.value)">
+        <option value="null">Choose your domain</option>
+        <option value="customer">Customer</option>
+        <option value="vendor">Vendor</option>
+        </select><br>
+        </td>
+        </tr>
+        <tr>
+        <td><input type="text" name="email" id="email" placeholder="Enter your email id"></td>
+        </tr>
+        <tr>
+        <td><input type="password" name="password" id="password" placeholder="Enter your password"></td>
+        </tr>
+        <tr>
+        <td><input type="password" name="repass" id="repass" placeholder="re-type your password"></td>
+        </tr>
+        <tr>
+            <td><input type="number" name="contact" id="contact" placeholder="Enter your mobile number"></td>
+        </tr>
+        <tr>
+        <td><input type="text" name="address" id="address" placeholder="Enter your address"></td>
+        </tr>
+        <tr>
+            <td><select name="city" id="city" onchange="cityCheck(this.value)">
+                <option value="null">Your city</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Gandhinagar">Gandhinagar</option>
+            </select><p id="disclaimer">*our services are current available<br>in these citites only</p></td>
+            <!-- <td><input type="text" name="city" id="city" placeholder="Your city"></td> -->
+            </tr>
+        <tr>
+        <td><button type="submit" id="submit"> Submit </button></td>
+        </tr>    
+        </table>
+        </form>
+    </body>
+</html>

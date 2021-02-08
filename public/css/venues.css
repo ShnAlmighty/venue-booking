@@ -1,0 +1,45 @@
+#venueinfo{
+    margin-top:1vw;
+    height:60vh;
+    width:20vw;
+    border:outset;
+    border-color: rgb(250, 147, 28); 
+    background-color: white;
+    opacity: 0;
+}
+#venueinfo:hover{
+    cursor:pointer;
+    /* height: 50vh; */
+    border-color: lightgreen;
+    transition: 1s;
+    /* position: absolute; */
+}
+table{
+    margin-left: 17vw;
+    /* position: fixed; */
+}
+#det{
+    font-size: 1.2vw;
+    visibility: hidden;
+    /* overflow-y: scroll; */
+}
+#venueimg{
+    width:15vw;
+    height:15vh;
+    margin: 2vw;
+    border: black;
+}
+
+#venuesubmit{
+    width:10vw;
+    height:5vh;
+    /* margin-top:2vw; */
+    /* visibility: hidden; */
+    background-color: lightskyblue;
+}
+#venuesubmit:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+    background-color: lightgreen;
+    transition: .4s;
+}
